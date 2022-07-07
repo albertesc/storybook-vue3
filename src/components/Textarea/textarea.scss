@@ -1,0 +1,47 @@
+.textarea {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  border: 1px solid #ced4da;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  min-height: 130px;
+  outline: none;
+  padding: 0.625rem 0.875rem;
+  resize: none;
+  width: 100%;
+
+  &::placeholder {
+    color: #9b9b9b;
+  }
+
+  &:focus {
+    border: 1px solid var(--color-primary);
+  }
+
+  &--disabled {
+    background: #f1f5f7;
+    border: 1px solid #ced4da;
+  }
+
+  &--error {
+    background-color: #fef2f2;
+    border: 1px solid var(--color-danger);
+
+    &::placeholder {
+      color: #fca5a5;
+    }
+
+    &:focus {
+      border: 1px solid var(--color-danger);
+    }
+  }
+
+  &--small {
+    height: 0;
+    min-height: 2.5rem;
+  }
+
+  &--resize {
+    resize: vertical;
+  }
+}

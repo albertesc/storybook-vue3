@@ -1,0 +1,87 @@
+@mixin input-icon-style {
+  display: block;
+  height: 0.875rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 0.875rem;
+
+  svg {
+    color: #4a4a4a;
+  }
+}
+
+.input {
+  position: relative;
+  width: 100%;
+
+  input {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    border: 1px solid #ced4da;
+    color: var(--color-text);
+    font-size: 0.875rem;
+    outline: none;
+    padding: 0.625rem 0.875rem;
+    width: 100%;
+
+    &::placeholder {
+      color: #9b9b9b;
+    }
+
+    &:focus {
+      border: 1px solid var(--color-primary);
+    }
+  }
+
+  &--disabled {
+    input {
+      background: #f1f5f7;
+      border: 1px solid #ced4da;
+    }
+  }
+
+  &--error {
+    input {
+      background-color: #fef2f2;
+      border: 1px solid var(--color-danger);
+
+      &::placeholder {
+        color: #fca5a5;
+      }
+
+      &:focus {
+        border: 1px solid var(--color-danger);
+      }
+    }
+  }
+
+  &--small {
+    input {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  &--icon-left {
+    input {
+      padding-left: 2.25rem;
+    }
+
+    .icon-left {
+      @include input-icon-style;
+      left: 0.875rem;
+    }
+  }
+
+  &--icon-right {
+    input {
+      padding-right: 2.25rem;
+    }
+
+    .icon-right {
+      @include input-icon-style;
+      right: 0.875rem;
+    }
+  }
+}

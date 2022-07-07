@@ -1,0 +1,38 @@
+.button {
+  background-color: var(--button-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--button-color);
+  color: var(--color-white);
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.625rem 1.5rem;
+
+  &--line {
+    background-color: transparent;
+    border: 1px solid var(--button-color);
+    color: var(--button-color);
+  }
+
+  &--link {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 16px;
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  &--small {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  &--primary {
+    --button-color: var(--color-primary);
+  }
+
+  &--secondary {
+    --button-color: var(--color-secondary);
+  }
+}
